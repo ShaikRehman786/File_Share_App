@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = process.env.REACT_APP_API_URL;
+const API_URL ="https://file-share-app-a9zd.onrender.com";
 
 
 export const uploadFile = async (data) => {
