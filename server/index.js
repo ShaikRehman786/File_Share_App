@@ -5,10 +5,16 @@ import DBConnection from "./database/db.js";
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: 'https://file-share-app-07dk.onrender.com', // Your frontend URL
+  methods: ['GET', 'POST'],
+}));
+
+app.use(express.json());
 app.use("/", router);
 
-const PORT = 8000;
+const PORT = process.env.PORT || 8000;
+
 
 DBConnection();
 
